@@ -17,6 +17,8 @@
 		C97F70A11AA9F5370044F22E /* SingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A01AA9F5370044F22E /* SingleView.m */; };
 		C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A41AA9FB010044F22E /* MarginsView.m */; };
 		C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A71AA9FBE00044F22E /* MarginsViewController.m */; };
+		C97F70AC1AA9FFCB0044F22E /* NestedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70AB1AA9FFCB0044F22E /* NestedView.m */; };
+		C97F70AF1AA9FFDC0044F22E /* NestedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70AE1AA9FFDC0044F22E /* NestedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		C97F70A41AA9FB010044F22E /* MarginsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginsView.m; sourceTree = "<group>"; };
 		C97F70A61AA9FBE00044F22E /* MarginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginsViewController.h; sourceTree = "<group>"; };
 		C97F70A71AA9FBE00044F22E /* MarginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginsViewController.m; sourceTree = "<group>"; };
+		C97F70AA1AA9FFCB0044F22E /* NestedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedView.h; sourceTree = "<group>"; };
+		C97F70AB1AA9FFCB0044F22E /* NestedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedView.m; sourceTree = "<group>"; };
+		C97F70AD1AA9FFDC0044F22E /* NestedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedViewController.h; sourceTree = "<group>"; };
+		C97F70AE1AA9FFDC0044F22E /* NestedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F70A21AA9FACE0044F22E /* MarginsView */,
+				C97F70A91AA9FF970044F22E /* NestedView */,
 				C97F709B1AA9F4EF0044F22E /* SingleView */,
 				C97F70761AA9F0530044F22E /* AppDelegate.h */,
 				C97F70771AA9F0530044F22E /* AppDelegate.m */,
@@ -148,6 +155,17 @@
 				C97F70A71AA9FBE00044F22E /* MarginsViewController.m */,
 			);
 			path = MarginsView;
+			sourceTree = "<group>";
+		};
+		C97F70A91AA9FF970044F22E /* NestedView */ = {
+			isa = PBXGroup;
+			children = (
+				C97F70AA1AA9FFCB0044F22E /* NestedView.h */,
+				C97F70AB1AA9FFCB0044F22E /* NestedView.m */,
+				C97F70AD1AA9FFDC0044F22E /* NestedViewController.h */,
+				C97F70AE1AA9FFDC0044F22E /* NestedViewController.m */,
+			);
+			path = NestedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97F70A11AA9F5370044F22E /* SingleView.m in Sources */,
+				C97F70AC1AA9FFCB0044F22E /* NestedView.m in Sources */,
 				C97F709E1AA9F5280044F22E /* SingleViewController.m in Sources */,
+				C97F70AF1AA9FFDC0044F22E /* NestedViewController.m in Sources */,
 				C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */,
 				C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */,
 				C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */,

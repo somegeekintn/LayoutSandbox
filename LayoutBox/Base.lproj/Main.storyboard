@@ -49,6 +49,23 @@
                                             <segue destination="zKa-3M-jLI" kind="show" id="N3q-MX-Exv"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="VAU-PB-p2S" style="IBUITableViewCellStyleDefault" id="Cv3-9D-YrQ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cv3-9D-YrQ" id="62v-3T-khi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nested Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VAU-PB-p2S">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="V1S-0G-taS" kind="show" id="WYG-3Z-AJM"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -61,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOC-Az-esy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="150"/>
+            <point key="canvasLocation" x="-1117" y="776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUO-zm-96Y">
@@ -136,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="150"/>
+            <point key="canvasLocation" x="-670" y="150"/>
         </scene>
         <!--Margins View-->
         <scene sceneID="n9d-yC-pNP">
@@ -196,7 +213,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYc-rN-iK9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="776"/>
+            <point key="canvasLocation" x="-670" y="776"/>
+        </scene>
+        <!--Nested Views-->
+        <scene sceneID="Ggq-6L-I8Z">
+            <objects>
+                <viewController title="Nested Views" automaticallyAdjustsScrollViewInsets="NO" id="V1S-0G-taS" customClass="NestedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sez-N1-KR3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZOQ-4t-VBc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xCZ-BH-x06">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-lT-hNU">
+                                <rect key="frame" x="99" y="8" width="122" height="30"/>
+                                <state key="normal" title="Toggle Immediate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSize:" destination="8bl-Hf-har" eventType="touchUpInside" id="EcZ-z8-mMh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bl-Hf-har" customClass="NestedView">
+                                <rect key="frame" x="60" y="108" width="200" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5IC-ZV-3Zy">
+                                        <rect key="frame" x="50" y="50" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="XCr-gC-CtX"/>
+                                            <constraint firstAttribute="width" constant="100" id="aad-w1-eeH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LcG-uy-GPf"/>
+                                    <constraint firstItem="5IC-ZV-3Zy" firstAttribute="top" secondItem="8bl-Hf-har" secondAttribute="top" constant="50" id="NYy-ka-6QM"/>
+                                    <constraint firstAttribute="bottom" secondItem="5IC-ZV-3Zy" secondAttribute="bottom" constant="50" id="WQX-zD-wyS"/>
+                                    <constraint firstAttribute="centerX" secondItem="5IC-ZV-3Zy" secondAttribute="centerX" id="pg2-PD-2h7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="XCr-gC-CtX" id="xsl-pK-hqx"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-k6-St1">
+                                <rect key="frame" x="103" y="46" width="115" height="30"/>
+                                <state key="normal" title="Toggle Animated">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSizeAnimated:" destination="8bl-Hf-har" eventType="touchUpInside" id="dP5-LN-DLm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3pZ-k6-St1" secondAttribute="centerX" id="6rM-kl-B0Y"/>
+                            <constraint firstAttribute="centerX" secondItem="HMH-lT-hNU" secondAttribute="centerX" id="8uJ-3U-jyN"/>
+                            <constraint firstItem="HMH-lT-hNU" firstAttribute="top" secondItem="sez-N1-KR3" secondAttribute="bottom" constant="8" symbolic="YES" id="TAg-pk-OmI"/>
+                            <constraint firstItem="3pZ-k6-St1" firstAttribute="top" secondItem="HMH-lT-hNU" secondAttribute="bottom" constant="8" symbolic="YES" id="c4E-pl-DTJ"/>
+                            <constraint firstAttribute="centerY" secondItem="8bl-Hf-har" secondAttribute="centerY" id="tLL-bm-CKr"/>
+                            <constraint firstAttribute="centerX" secondItem="8bl-Hf-har" secondAttribute="centerX" id="yeO-81-AAy"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="InL-GX-og9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-670" y="1404"/>
         </scene>
     </scenes>
 </document>
