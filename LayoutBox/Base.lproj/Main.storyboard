@@ -105,7 +105,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RootView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -163,7 +163,7 @@
                         <viewControllerLayoutGuide type="top" id="Iog-5m-VbY"/>
                         <viewControllerLayoutGuide type="bottom" id="pea-4G-hHG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Eiu-ke-YRJ">
+                    <view key="view" contentMode="scaleToFill" id="Eiu-ke-YRJ" customClass="RootView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -223,7 +223,7 @@
                         <viewControllerLayoutGuide type="top" id="sez-N1-KR3"/>
                         <viewControllerLayoutGuide type="bottom" id="ZOQ-4t-VBc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xCZ-BH-x06">
+                    <view key="view" contentMode="scaleToFill" id="xCZ-BH-x06" customClass="RootView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
