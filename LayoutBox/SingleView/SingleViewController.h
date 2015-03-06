@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SingleViewController.h
 //  LayoutBox
 //
 //  Created by Casey Fleser on 3/6/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SingleViewController : UIViewController
 
 @end
-

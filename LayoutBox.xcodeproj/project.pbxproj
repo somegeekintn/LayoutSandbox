@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		C97F70751AA9F0530044F22E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70741AA9F0530044F22E /* main.m */; };
 		C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70771AA9F0530044F22E /* AppDelegate.m */; };
-		C97F707B1AA9F0530044F22E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F707A1AA9F0530044F22E /* ViewController.m */; };
 		C97F707E1AA9F0530044F22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97F707C1AA9F0530044F22E /* Main.storyboard */; };
 		C97F70801AA9F0530044F22E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97F707F1AA9F0530044F22E /* Images.xcassets */; };
 		C97F70831AA9F0530044F22E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97F70811AA9F0530044F22E /* LaunchScreen.xib */; };
 		C97F708F1AA9F0530044F22E /* LayoutBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F708E1AA9F0530044F22E /* LayoutBoxTests.m */; };
+		C97F709E1AA9F5280044F22E /* SingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F709D1AA9F5280044F22E /* SingleViewController.m */; };
+		C97F70A11AA9F5370044F22E /* SingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A01AA9F5370044F22E /* SingleView.m */; };
+		C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A41AA9FB010044F22E /* MarginsView.m */; };
+		C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70A71AA9FBE00044F22E /* MarginsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,20 @@
 		C97F70741AA9F0530044F22E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C97F70761AA9F0530044F22E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C97F70771AA9F0530044F22E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C97F70791AA9F0530044F22E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C97F707A1AA9F0530044F22E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C97F707D1AA9F0530044F22E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97F707F1AA9F0530044F22E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C97F70821AA9F0530044F22E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C97F70881AA9F0530044F22E /* LayoutBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97F708D1AA9F0530044F22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97F708E1AA9F0530044F22E /* LayoutBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutBoxTests.m; sourceTree = "<group>"; };
+		C97F709C1AA9F5280044F22E /* SingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewController.h; sourceTree = "<group>"; };
+		C97F709D1AA9F5280044F22E /* SingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewController.m; sourceTree = "<group>"; };
+		C97F709F1AA9F5370044F22E /* SingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleView.h; sourceTree = "<group>"; };
+		C97F70A01AA9F5370044F22E /* SingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleView.m; sourceTree = "<group>"; };
+		C97F70A31AA9FB010044F22E /* MarginsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginsView.h; sourceTree = "<group>"; };
+		C97F70A41AA9FB010044F22E /* MarginsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginsView.m; sourceTree = "<group>"; };
+		C97F70A61AA9FBE00044F22E /* MarginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarginsViewController.h; sourceTree = "<group>"; };
+		C97F70A71AA9FBE00044F22E /* MarginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarginsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,10 @@
 		C97F70711AA9F0530044F22E /* LayoutBox */ = {
 			isa = PBXGroup;
 			children = (
+				C97F70A21AA9FACE0044F22E /* MarginsView */,
+				C97F709B1AA9F4EF0044F22E /* SingleView */,
 				C97F70761AA9F0530044F22E /* AppDelegate.h */,
 				C97F70771AA9F0530044F22E /* AppDelegate.m */,
-				C97F70791AA9F0530044F22E /* ViewController.h */,
-				C97F707A1AA9F0530044F22E /* ViewController.m */,
 				C97F707C1AA9F0530044F22E /* Main.storyboard */,
 				C97F707F1AA9F0530044F22E /* Images.xcassets */,
 				C97F70811AA9F0530044F22E /* LaunchScreen.xib */,
@@ -117,6 +126,28 @@
 				C97F708D1AA9F0530044F22E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C97F709B1AA9F4EF0044F22E /* SingleView */ = {
+			isa = PBXGroup;
+			children = (
+				C97F709C1AA9F5280044F22E /* SingleViewController.h */,
+				C97F709D1AA9F5280044F22E /* SingleViewController.m */,
+				C97F709F1AA9F5370044F22E /* SingleView.h */,
+				C97F70A01AA9F5370044F22E /* SingleView.m */,
+			);
+			path = SingleView;
+			sourceTree = "<group>";
+		};
+		C97F70A21AA9FACE0044F22E /* MarginsView */ = {
+			isa = PBXGroup;
+			children = (
+				C97F70A31AA9FB010044F22E /* MarginsView.h */,
+				C97F70A41AA9FB010044F22E /* MarginsView.m */,
+				C97F70A61AA9FBE00044F22E /* MarginsViewController.h */,
+				C97F70A71AA9FBE00044F22E /* MarginsViewController.m */,
+			);
+			path = MarginsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97F707B1AA9F0530044F22E /* ViewController.m in Sources */,
+				C97F70A11AA9F5370044F22E /* SingleView.m in Sources */,
+				C97F709E1AA9F5280044F22E /* SingleViewController.m in Sources */,
 				C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */,
+				C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */,
+				C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */,
 				C97F70751AA9F0530044F22E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

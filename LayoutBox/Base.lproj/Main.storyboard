@@ -1,25 +1,202 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5s-uJ-brj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Layout Sandbox-->
+        <scene sceneID="WWE-E4-0Ia">
+            <objects>
+                <tableViewController title="Layout Sandbox" id="9XS-d0-9Vo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8AM-UO-zBv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="f15-SZ-GZG">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="3Q3-an-xn4" style="IBUITableViewCellStyleDefault" id="UkH-7d-oXy">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UkH-7d-oXy" id="8tP-Cz-CS7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Single View (height)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Q3-an-xn4">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="mFj-tI-F2R"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="I5e-dD-0vZ" style="IBUITableViewCellStyleDefault" id="MRK-rm-zu1">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MRK-rm-zu1" id="Oou-Ia-mdS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Single View (margins)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I5e-dD-0vZ">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zKa-3M-jLI" kind="show" id="N3q-MX-Exv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9XS-d0-9Vo" id="7qY-ug-jad"/>
+                            <outlet property="delegate" destination="9XS-d0-9Vo" id="81C-Tu-31Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bOQ-Tx-8XS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOC-Az-esy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cUO-zm-96Y">
+            <objects>
+                <navigationController id="X5s-uJ-brj" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CGu-Rt-jMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9XS-d0-9Vo" kind="relationship" relationship="rootViewController" id="zZ2-eX-bC2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSh-yd-jod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1117" y="150"/>
+        </scene>
+        <!--Single View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Single View" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="SingleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3H-UV-6Hp">
+                                <rect key="frame" x="99" y="8" width="122" height="30"/>
+                                <state key="normal" title="Toggle Immediate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSize:" destination="pds-Pf-UrO" eventType="touchUpInside" id="nDH-lD-8Ol"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pds-Pf-UrO" customClass="SingleView">
+                                <rect key="frame" x="60" y="108" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3Mm-Lt-2la"/>
+                                    <constraint firstAttribute="width" constant="200" id="J80-ws-RES"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="3Mm-Lt-2la" id="vGQ-e9-vrH"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By6-UC-uIu">
+                                <rect key="frame" x="103" y="46" width="115" height="30"/>
+                                <state key="normal" title="Toggle Animated">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSizeAnimated:" destination="pds-Pf-UrO" eventType="touchUpInside" id="rUu-u8-QVm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pds-Pf-UrO" secondAttribute="centerX" id="4s7-S9-4hF"/>
+                            <constraint firstItem="I3H-UV-6Hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Jcx-5M-F09"/>
+                            <constraint firstAttribute="centerX" secondItem="By6-UC-uIu" secondAttribute="centerX" id="OA2-nT-4uZ"/>
+                            <constraint firstItem="By6-UC-uIu" firstAttribute="top" secondItem="I3H-UV-6Hp" secondAttribute="bottom" constant="8" symbolic="YES" id="f92-ZR-VQ4"/>
+                            <constraint firstAttribute="centerY" secondItem="pds-Pf-UrO" secondAttribute="centerY" id="vTC-3y-UnZ"/>
+                            <constraint firstAttribute="centerX" secondItem="I3H-UV-6Hp" secondAttribute="centerX" id="vji-Qi-b6W"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-134" y="150"/>
+        </scene>
+        <!--Margins View-->
+        <scene sceneID="n9d-yC-pNP">
+            <objects>
+                <viewController title="Margins View" automaticallyAdjustsScrollViewInsets="NO" id="zKa-3M-jLI" customClass="SingleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iog-5m-VbY"/>
+                        <viewControllerLayoutGuide type="bottom" id="pea-4G-hHG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eiu-ke-YRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tql-Lm-aAa">
+                                <rect key="frame" x="99" y="8" width="122" height="30"/>
+                                <state key="normal" title="Toggle Immediate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSize:" destination="RF9-a6-Wgl" eventType="touchUpInside" id="ecl-IQ-dTY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF9-a6-Wgl" customClass="MarginsView">
+                                <rect key="frame" x="60" y="100" width="200" height="216"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Zgw-MT-nV1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="bottomMarginConstraint" destination="fkx-K9-V2F" id="AHd-tb-V1k"/>
+                                    <outlet property="topMarginConstraint" destination="Kj4-kg-PN3" id="pYw-HC-5bu"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIN-u8-dgx">
+                                <rect key="frame" x="103" y="46" width="115" height="30"/>
+                                <state key="normal" title="Toggle Animated">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSizeAnimated:" destination="RF9-a6-Wgl" eventType="touchUpInside" id="9c9-DJ-XeD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="RF9-a6-Wgl" secondAttribute="centerX" id="Hsp-is-HIW"/>
+                            <constraint firstItem="Tql-Lm-aAa" firstAttribute="top" secondItem="Iog-5m-VbY" secondAttribute="bottom" constant="8" symbolic="YES" id="KSJ-vO-KBz"/>
+                            <constraint firstItem="RF9-a6-Wgl" firstAttribute="top" secondItem="Iog-5m-VbY" secondAttribute="bottom" constant="100" id="Kj4-kg-PN3"/>
+                            <constraint firstAttribute="centerX" secondItem="ZIN-u8-dgx" secondAttribute="centerX" id="N5m-Ok-WX2"/>
+                            <constraint firstItem="pea-4G-hHG" firstAttribute="top" secondItem="RF9-a6-Wgl" secondAttribute="bottom" constant="100" id="fkx-K9-V2F"/>
+                            <constraint firstAttribute="centerY" secondItem="RF9-a6-Wgl" secondAttribute="centerY" id="g9Y-kh-iaf"/>
+                            <constraint firstAttribute="centerX" secondItem="Tql-Lm-aAa" secondAttribute="centerX" id="gox-NX-bQS"/>
+                            <constraint firstItem="ZIN-u8-dgx" firstAttribute="top" secondItem="Tql-Lm-aAa" secondAttribute="bottom" constant="8" symbolic="YES" id="j4W-Ug-4JP"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYc-rN-iK9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-134" y="776"/>
         </scene>
     </scenes>
 </document>
