@@ -10,6 +10,8 @@
 //       A more typical approach would be to define the spacing between various
 //       elements inside the cell's content view and allow auto-layout to derive
 //       the height that way.
+//
+// Another note: Some good notes here: http://stackoverflow.com/questions/18746929/using-auto-layout-in-uitableview-for-dynamic-cell-layouts-variable-row-heights
 
 #import "TableViewController.h"
 #import "TableViewCell.h"
@@ -47,6 +49,8 @@
 
 	NSLog(@"%s: exit", __PRETTY_FUNCTION__);
 }
+
+#pragma mark - Helpers
 
 - (NSString *) titleForItemAtIndexPath: (NSIndexPath *) inIndexPath
 {

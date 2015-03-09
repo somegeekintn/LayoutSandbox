@@ -22,6 +22,8 @@
 		C97F70B21AAA06340044F22E /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70B11AAA06340044F22E /* RootView.m */; };
 		C97F70B61AAA08530044F22E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70B51AAA08530044F22E /* TableViewController.m */; };
 		C97F70B91AAA091C0044F22E /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70B81AAA091C0044F22E /* TableViewCell.m */; };
+		C97F70BD1AAA649A0044F22E /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70BC1AAA649A0044F22E /* CollectionViewController.m */; };
+		C9AC789B1AADF2F80064752D /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AC789A1AADF2F80064752D /* ContainerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		C97F70B51AAA08530044F22E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C97F70B71AAA091C0044F22E /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		C97F70B81AAA091C0044F22E /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		C97F70BB1AAA649A0044F22E /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		C97F70BC1AAA649A0044F22E /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		C9AC78991AADF2F80064752D /* ContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerView.h; sourceTree = "<group>"; };
+		C9AC789A1AADF2F80064752D /* ContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +111,11 @@
 		C97F70711AA9F0530044F22E /* LayoutBox */ = {
 			isa = PBXGroup;
 			children = (
-				C97F70B31AAA08200044F22E /* TableView */,
+				C97F70BA1AAA646C0044F22E /* CollectionView */,
 				C97F70A21AA9FACE0044F22E /* MarginsView */,
 				C97F70A91AA9FF970044F22E /* NestedView */,
 				C97F709B1AA9F4EF0044F22E /* SingleView */,
+				C97F70B31AAA08200044F22E /* TableView */,
 				C97F70761AA9F0530044F22E /* AppDelegate.h */,
 				C97F70771AA9F0530044F22E /* AppDelegate.m */,
 				C97F70B01AAA06340044F22E /* RootView.h */,
@@ -189,6 +196,17 @@
 				C97F70B81AAA091C0044F22E /* TableViewCell.m */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		C97F70BA1AAA646C0044F22E /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C9AC78991AADF2F80064752D /* ContainerView.h */,
+				C9AC789A1AADF2F80064752D /* ContainerView.m */,
+				C97F70BB1AAA649A0044F22E /* CollectionViewController.h */,
+				C97F70BC1AAA649A0044F22E /* CollectionViewController.m */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +317,11 @@
 				C97F70AF1AA9FFDC0044F22E /* NestedViewController.m in Sources */,
 				C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */,
 				C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */,
+				C97F70BD1AAA649A0044F22E /* CollectionViewController.m in Sources */,
 				C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */,
 				C97F70B91AAA091C0044F22E /* TableViewCell.m in Sources */,
 				C97F70751AA9F0530044F22E /* main.m in Sources */,
+				C9AC789B1AADF2F80064752D /* ContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +516,7 @@
 				C97F70941AA9F0540044F22E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97F70951AA9F0540044F22E /* Build configuration list for PBXNativeTarget "LayoutBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +525,7 @@
 				C97F70971AA9F0540044F22E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
