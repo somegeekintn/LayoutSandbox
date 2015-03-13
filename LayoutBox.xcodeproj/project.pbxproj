@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C94017BA1AB34C9D00C3A59C /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C94017B91AB34C9D00C3A59C /* HeaderView.m */; };
 		C97F70751AA9F0530044F22E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70741AA9F0530044F22E /* main.m */; };
 		C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70771AA9F0530044F22E /* AppDelegate.m */; };
 		C97F707E1AA9F0530044F22E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97F707C1AA9F0530044F22E /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C94017B81AB34C9D00C3A59C /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		C94017B91AB34C9D00C3A59C /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		C97F706F1AA9F0530044F22E /* LayoutBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97F70731AA9F0530044F22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97F70741AA9F0530044F22E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				C9AC789A1AADF2F80064752D /* ContainerView.m */,
 				C97F70BB1AAA649A0044F22E /* CollectionViewController.h */,
 				C97F70BC1AAA649A0044F22E /* CollectionViewController.m */,
+				C94017B81AB34C9D00C3A59C /* HeaderView.h */,
+				C94017B91AB34C9D00C3A59C /* HeaderView.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				C97F709E1AA9F5280044F22E /* SingleViewController.m in Sources */,
 				C97F70AF1AA9FFDC0044F22E /* NestedViewController.m in Sources */,
 				C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */,
+				C94017BA1AB34C9D00C3A59C /* HeaderView.m in Sources */,
 				C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */,
 				C97F70BD1AAA649A0044F22E /* CollectionViewController.m in Sources */,
 				C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */,

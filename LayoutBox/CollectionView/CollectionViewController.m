@@ -8,11 +8,23 @@
 
 #import "CollectionViewController.h"
 #import "ContainerView.h"
+#import "HeaderView.h"
+
+@interface CollectionSizingController ()
+
+@property (nonatomic, weak) IBOutlet HeaderView		*header;
+@property (nonatomic, weak) IBOutlet ContainerView	*containerCell;
+
+@end
+
+@implementation CollectionSizingController
+@end
 
 @interface CollectionViewController ()
 
-@property (nonatomic, weak) IBOutlet UICollectionView	*collectionView;
-@property (nonatomic, assign) BOOL						expanded;
+@property (nonatomic, strong) CollectionSizingController	*sizingController;
+@property (nonatomic, weak) IBOutlet UICollectionView		*collectionView;
+@property (nonatomic, assign) BOOL							expanded;
 
 @end
 
@@ -23,29 +35,31 @@
 	[super viewDidLoad];
 }
 
-- (void) viewWillLayoutSubviews
+#pragma mark - Getters / Setters
+
+- (CollectionSizingController *) sizingController
 {
-	NSLog(@"%s: enter", __PRETTY_FUNCTION__);
+	if (_sizingController == nil) {
+		UIView		*view;
+		
+		_sizingController = [[UIStoryboard storyboardWithName: @"Main" bundle: nil] instantiateViewControllerWithIdentifier: @"CollectionContainer"];
+		[_sizingController loadView];
+
+		view = _sizingController.containerCell;
+		[view addConstraint: [NSLayoutConstraint constraintWithItem: view attribute: NSLayoutAttributeWidth relatedBy: NSLayoutRelationEqual toItem: nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.0 constant: [self collectionViewContentWidth]]];
+
+		view = _sizingController.header;
+		[view addConstraint: [NSLayoutConstraint constraintWithItem: view attribute: NSLayoutAttributeWidth relatedBy: NSLayoutRelationEqual toItem: nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.0 constant: CGRectGetWidth(self.collectionView.frame)]];
+	}
 	
-	[super viewWillLayoutSubviews];
-
-	NSLog(@"%s: exit", __PRETTY_FUNCTION__);
-}
-
-- (void) viewDidLayoutSubviews
-{
-	NSLog(@"%s: enter", __PRETTY_FUNCTION__);
-	
-	[super viewDidLayoutSubviews];
-
-	NSLog(@"%s: exit", __PRETTY_FUNCTION__);
+	return _sizingController;
 }
 
 #pragma mark - Helpers
 
 - (NSString *) titleForItemAtIndexPath: (NSIndexPath *) inIndexPath
 {
-	NSString	*word = self.expanded ? @"xxxxx" : @"xxx ";
+	NSString	*word = self.expanded ? @"xxxxxx " : @"xxx ";
 	NSString	*title = word;
 	
 	for (NSInteger idx=0; idx<inIndexPath.row; idx++) {
@@ -55,12 +69,24 @@
 	return title;//[NSString stringWithFormat: @"Item: %d", (int)inIndexPath.row];
 }
 
+- (CGFloat) collectionViewContentWidth
+{
+	UICollectionViewFlowLayout	*flowLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+
+	return CGRectGetWidth(self.collectionView.frame) - (flowLayout.sectionInset.left + flowLayout.sectionInset.right);
+}
+
 #pragma mark - UICollectionViewDataSource
+
+- (NSInteger) numberOfSectionsInCollectionView: (UICollectionView *) inCollectionView
+{
+	return 3;
+}
 
 - (NSInteger) collectionView: (UICollectionView *) inCollectionView
 	numberOfItemsInSection: (NSInteger) inSection
 {
-	return 10;
+	return 4;
 }
 
 - (UICollectionViewCell *) collectionView: (UICollectionView *) inCollectionView
@@ -77,22 +103,50 @@
 	return cell;
 }
 
+- (UICollectionReusableView *)collectionView: (UICollectionView *) inCollectionView
+	viewForSupplementaryElementOfKind: (NSString *) inKind
+	atIndexPath: (NSIndexPath *) inIndexPath
+{
+	UICollectionReusableView		*reusableView = [inCollectionView dequeueReusableSupplementaryViewOfKind: inKind withReuseIdentifier: @"MainHeader" forIndexPath: inIndexPath];
+	HeaderView						*headerView = (HeaderView *)[[reusableView subviews] firstObject];
+
+	headerView.collapsed = inIndexPath.section != 0 ? YES : NO;
+	headerView.title.text = [NSString stringWithFormat: @"Sub-title %d", inIndexPath.section + 1];
+	
+	NSLog(@"%s: viewForSupplementaryElementOfKind %@ - %@", __PRETTY_FUNCTION__, inKind, inIndexPath);
+	NSLog(@"%s: reusableView %p", __PRETTY_FUNCTION__, reusableView);
+	NSLog(@"%s: headerView.title.text %p = %@", __PRETTY_FUNCTION__, headerView, headerView.title.text);
+	NSLog(@"%s: inIndexPath %@", __PRETTY_FUNCTION__, inIndexPath);
+	
+	return reusableView;
+}
+
+- (CGSize) collectionView: (UICollectionView *) inCollectionView
+	layout: (UICollectionViewLayout *) inCollectionViewLayout
+	referenceSizeForHeaderInSection: (NSInteger) inSection
+{
+	HeaderView			*headerView = self.sizingController.header;
+	CGSize				headerSize;
+	
+	headerView.collapsed = inSection != 0 ? YES : NO;
+	headerSize = [headerView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
+
+	NSLog(@"%s: headerSize %@", __PRETTY_FUNCTION__, NSStringFromCGSize(headerSize));
+
+	return headerSize;
+}
+
 - (CGSize) collectionView: (UICollectionView *) inCollectionView
 	layout: (UICollectionViewLayout *) inCollectionViewLayout
 	sizeForItemAtIndexPath: (NSIndexPath *) inIndexPath
 {
 	NSLog(@"%s: enter", __PRETTY_FUNCTION__);
-	static UIViewController		*sSizingController = nil;
 	ContainerView				*containerView;
 	CGSize						cellSize;
 	
-	if (sSizingController == nil) {
-		sSizingController = [[UIStoryboard storyboardWithName: @"Main" bundle: nil] instantiateViewControllerWithIdentifier: @"CollectionContainer"];
-	}
-	
-	containerView = (ContainerView *)sSizingController.view;
+	containerView = self.sizingController.containerCell;
 	containerView.title.text = [self titleForItemAtIndexPath: inIndexPath];
-	cellSize = [sSizingController.view systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
+	cellSize = [containerView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
 	
 	NSLog(@"size %@ for %@", NSStringFromCGSize(cellSize), inIndexPath);
 
