@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9095BE91AC9C52D0038536F /* LabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9095BE81AC9C52D0038536F /* LabelViewController.m */; };
+		C9095BEC1AC9C9540038536F /* UIView+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = C9095BEB1AC9C9540038536F /* UIView+Info.m */; };
 		C94017BA1AB34C9D00C3A59C /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C94017B91AB34C9D00C3A59C /* HeaderView.m */; };
 		C97F70751AA9F0530044F22E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70741AA9F0530044F22E /* main.m */; };
 		C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C97F70771AA9F0530044F22E /* AppDelegate.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9095BE71AC9C52D0038536F /* LabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelViewController.h; sourceTree = "<group>"; };
+		C9095BE81AC9C52D0038536F /* LabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelViewController.m; sourceTree = "<group>"; };
+		C9095BEA1AC9C9540038536F /* UIView+Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Info.h"; sourceTree = "<group>"; };
+		C9095BEB1AC9C9540038536F /* UIView+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Info.m"; sourceTree = "<group>"; };
 		C94017B81AB34C9D00C3A59C /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		C94017B91AB34C9D00C3A59C /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		C97F706F1AA9F0530044F22E /* LayoutBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9095BE61AC9C3AE0038536F /* LabelView */ = {
+			isa = PBXGroup;
+			children = (
+				C9095BE71AC9C52D0038536F /* LabelViewController.h */,
+				C9095BE81AC9C52D0038536F /* LabelViewController.m */,
+			);
+			path = LabelView;
+			sourceTree = "<group>";
+		};
 		C97F70661AA9F0530044F22E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +129,7 @@
 		C97F70711AA9F0530044F22E /* LayoutBox */ = {
 			isa = PBXGroup;
 			children = (
+				C9095BE61AC9C3AE0038536F /* LabelView */,
 				C97F70BA1AAA646C0044F22E /* CollectionView */,
 				C97F70A21AA9FACE0044F22E /* MarginsView */,
 				C97F70A91AA9FF970044F22E /* NestedView */,
@@ -123,6 +139,8 @@
 				C97F70771AA9F0530044F22E /* AppDelegate.m */,
 				C97F70B01AAA06340044F22E /* RootView.h */,
 				C97F70B11AAA06340044F22E /* RootView.m */,
+				C9095BEA1AC9C9540038536F /* UIView+Info.h */,
+				C9095BEB1AC9C9540038536F /* UIView+Info.m */,
 				C97F707C1AA9F0530044F22E /* Main.storyboard */,
 				C97F707F1AA9F0530044F22E /* Images.xcassets */,
 				C97F70811AA9F0530044F22E /* LaunchScreen.xib */,
@@ -322,9 +340,11 @@
 				C97F70AF1AA9FFDC0044F22E /* NestedViewController.m in Sources */,
 				C97F70781AA9F0530044F22E /* AppDelegate.m in Sources */,
 				C94017BA1AB34C9D00C3A59C /* HeaderView.m in Sources */,
+				C9095BEC1AC9C9540038536F /* UIView+Info.m in Sources */,
 				C97F70A51AA9FB010044F22E /* MarginsView.m in Sources */,
 				C97F70BD1AAA649A0044F22E /* CollectionViewController.m in Sources */,
 				C97F70A81AA9FBE00044F22E /* MarginsViewController.m in Sources */,
+				C9095BE91AC9C52D0038536F /* LabelViewController.m in Sources */,
 				C97F70B91AAA091C0044F22E /* TableViewCell.m in Sources */,
 				C97F70751AA9F0530044F22E /* main.m in Sources */,
 				C9AC789B1AADF2F80064752D /* ContainerView.m in Sources */,
